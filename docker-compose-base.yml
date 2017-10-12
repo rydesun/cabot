@@ -1,0 +1,8 @@
+version: '2'
+services:
+  base:
+    image: cabotapp/cabot
+    command: "false"
+    env_file:
+      - conf/default.env
+    restart: always
