@@ -1,7 +1,10 @@
 version: '2'
 services:
   base:
-    image: cabotapp/cabot
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-cabot
     command: "false"
     env_file:
       - conf/default.env
