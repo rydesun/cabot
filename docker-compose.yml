@@ -6,7 +6,7 @@ services:
       service: base
     env_file:
       - conf/production.env
-    command: sh -c " cabot migrate && gunicorn cabot.wsgi:application -b 0.0.0.0:5000 --workers=5"
+    command: cabot runserver 0.0.0.0:5000
     ports:
       - "5000:5000"
     links:
